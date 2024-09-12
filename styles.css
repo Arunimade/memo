@@ -1,4 +1,4 @@
-/* Reset some default styles for consistency */
+/* Global Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,10 +12,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
     color: #333;
 }
 
+/* Container */
 .container {
     background: white;
     padding: 30px;
@@ -24,6 +24,7 @@ body {
     width: 400px;
     max-width: 90%;
     transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Prevents content overflow */
 }
 
 .container:hover {
@@ -31,10 +32,11 @@ body {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
 }
 
+/* Heading */
 h1 {
-    margin-top: 0;
+    margin: 0;
     text-align: center;
-    font-size: 2em;
+    font-size: 2.2em; /* Slightly larger font size */
     color: #333;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -44,12 +46,14 @@ h1 {
     -webkit-text-fill-color: transparent; /* Text gradient */
 }
 
+/* Form */
 form {
     display: flex;
     flex-direction: column;
     gap: 15px; /* Add space between elements */
 }
 
+/* Textarea */
 textarea {
     padding: 15px;
     border-radius: 8px;
@@ -58,13 +62,16 @@ textarea {
     transition: border-color 0.3s;
     resize: none;
     height: 120px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
 }
 
 textarea:focus {
     border-color: #2575fc; /* Border color changes on focus */
     outline: none;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Enhanced inner shadow on focus */
 }
 
+/* Button */
 button {
     padding: 12px;
     background: linear-gradient(to right, #2575fc, #6a11cb);
@@ -73,28 +80,33 @@ button {
     border-radius: 8px;
     cursor: pointer;
     font-size: 1em;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle button shadow */
 }
 
 button:hover {
     background: linear-gradient(to right, #6a11cb, #2575fc);
     transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
+/* Memo Section */
 #memos {
     margin-top: 25px;
 }
 
+/* Individual Memo */
 .memo {
     background: #f0f4ff;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 15px;
     border-left: 5px solid #2575fc;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
 .memo:hover {
     background-color: #e2e7ff;
     transform: translateY(-3px); /* Lift effect on memo hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
 }
